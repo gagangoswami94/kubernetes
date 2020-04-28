@@ -11,7 +11,7 @@ LoadBalancer: Exposes the Service externally using a cloud provider’s load bal
 ExternalName: Maps the Service to the contents of the externalName field (e.g. foo.bar.example.com), by returning a CNAME record
 with its value. No proxying of any kind is set up.
 ```
-## IN our Case we are using AWS LoadBalancer
+## In our Case we are using AWS LoadBalancer
 # Defining Service Object and adding labels
 ```apiVersion: v1
 kind: Service
@@ -36,5 +36,6 @@ spec:
 
 ```
 ## Setting Service Type
-```type: LoadBalancer
+```
+type: LoadBalancer
 ```
