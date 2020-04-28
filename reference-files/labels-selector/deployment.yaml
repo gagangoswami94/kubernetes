@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: test-1
+    env: dev
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        name: nginx-dev-pods
+    spec:
+      containers:
+      - image: nginx:1.14.2
+        name: nginx
+  
+        ports:
+        - containerPort: 80
+          name:  http-port
